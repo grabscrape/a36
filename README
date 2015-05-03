@@ -1,0 +1,14 @@
+
+perl fetch0.pl
+perl fetch1.pl
+perl fetch2.pl 
+perl fetch-final.pl 
+wc -l a36.csv
+
+cat a36.csv | sort | uniq -c | sort -n > a36.uniq.csv
+
+wc -l a36.csv a36.uniq.csv 
+
+## vim: Set header to top
+
+perl parse_csv.pl
